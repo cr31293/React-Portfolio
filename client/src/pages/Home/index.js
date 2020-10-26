@@ -1,19 +1,15 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { container } from '@material-ui/core';
+import Hero from '../../components/Hero';
+import Header from "../../components/Header";
 
-const makeStyles = useStyles({
-    cover: {
-        backgroundImage: url("../assets/images/green_cup.png"),
-        maxWidth="xl"
-    }
-})
 
 function Home () {
-    const classes = useStyles();
 
     return (
-        <container/>
+        <React.Fragment>
+            <Header />
+            <Hero />
+        </React.Fragment>
     );
 };
 
