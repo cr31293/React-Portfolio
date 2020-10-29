@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
@@ -26,14 +26,14 @@ const useStyles = makeStyles((theme) => ({
   ticker: {
     marginTop: theme.spacing(2),
     width: '25%',
-    flexDirection: 'row-reverse'
+    flexDirection: 'row-reverse',
     
   }
 }));
 
 function Header() {
   const classes = useStyles();
-
+  const location = useLocation();
   return(
 
     <div className={"classes.group"}>
@@ -44,6 +44,7 @@ function Header() {
         className={classes.headerName}
       >
         <Button className={classes.headerName} to="/" >Chris Reed</Button>
+        <Button className={classes.headerName} disabled></Button>
         </ButtonGroup>
       <ButtonGroup 
         variant="text"
@@ -51,7 +52,12 @@ function Header() {
         aria-label="text primary button group"
         className={classes.heroButtons}
       >
-        <Button className={classes.heroButtons} to="/portfolio">Portfolio</Button>
+        <Link to="/portfolio" className={classes.heroButtons} style={{ textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
+          <Button >
+            Portfolio
+          </Button>
+        </Link>
+
         <Button className={classes.heroButtons}>Resume</Button>
         <Button className={classes.heroButtons}>Contact</Button>
       </ButtonGroup>
@@ -62,6 +68,9 @@ function Header() {
         className={classes.ticker}
       >
         <Button className={classes.ticker} to="/" >TICKER</Button>
+        <Button className={classes.ticker} disabled></Button>
+        <Button className={classes.ticker} disabled></Button>
+
         </ButtonGroup>
     </div>
   );

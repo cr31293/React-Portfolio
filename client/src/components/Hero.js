@@ -20,10 +20,7 @@ function Hero() {
   return (
     <>
       <div className={classes.heroContent}>
-        <Container maxWidth="sm">
-          <Hello />
-          <About />
-        </Container>
+
       </div>
     </>
   );

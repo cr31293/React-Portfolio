@@ -1,10 +1,12 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import { Container } from "@material-ui/core";
 
 function About() {
 
   return (
+    <Container maxWidth='sm'>
       <Typography 
         variant="h6"
         align="center"
@@ -21,6 +23,7 @@ function About() {
         <strong>E</strong>xpress <strong>R</strong>
         eact and <strong>N</strong>odeJS.
       </Typography>
+    </Container>
     );
 }
 
