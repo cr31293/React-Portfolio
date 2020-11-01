@@ -17,7 +17,38 @@ import '../../assets/images/burger-logger.png';
         img: '../../assets/images/burger-logger.png',
         title:'Test2',
         auther: 'test'
-      }
+      },
+      {
+        img: '../../assets/images/burger-logger.png',
+        title:'Test2',
+        auther: 'test'
+      },
+      {
+        img: '../../assets/images/burger-logger.png',
+        title:'Test2',
+        auther: 'test'
+      },
+      {
+        img: '../../assets/images/burger-logger.png',
+        title:'Test2',
+        auther: 'test'
+      },
+      {
+        img: '../../assets/images/burger-logger.png',
+        title:'Test2',
+        auther: 'test'
+      },
+      {
+        img: '../../assets/images/burger-logger.png',
+        title:'Test2',
+        auther: 'test'
+      },
+      {
+        img: '../../assets/images/burger-logger.png',
+        title:'Test2',
+        auther: 'test'
+      },
+      
     ]
 
 
