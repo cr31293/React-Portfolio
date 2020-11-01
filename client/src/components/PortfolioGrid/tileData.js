@@ -1,5 +1,5 @@
 import React from "react";
-import './images/burger-logger.png';
+import '../../assets/images/burger-logger.png';
 
 //  * const tileData = [
 //   *   {
@@ -12,10 +12,9 @@ import './images/burger-logger.png';
 //   *   },
 //   * ];
 
-
   const tileData = [
       {
-        img: './images/burger-logger.png',
+        img: '../../assets/images/burger-logger.png',
         title:'Test2',
         auther: 'test'
       }
