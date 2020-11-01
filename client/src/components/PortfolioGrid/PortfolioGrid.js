@@ -18,12 +18,25 @@ const useStyles = makeStyles((theme) => ({
 
   },
   gridList: {
-    width: 500,
-    height: 450,
+    width: 1000,
+    height: 600,
+    overflowY: "auto",
+    margin: 0,
+    padding: 0,
+    listStyle: "none",
+      '&::-webkit-scrollbar': {
+        width: '0.4em',
+        height: 1
+      },
+      '&::-webkit-scrollbar-thumb': {
+        backgroundColor: 'rgba(0,0,0,.075)',
+      },
+      
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
   },
+  
 }));
 
 /**
@@ -48,13 +61,13 @@ export default function PortfolioGrid() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <GridList cellHeight={180} className={classes.gridList}>
+    <div className={classes.root} >
+      <GridList cellHeight={250} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
           <ListSubheader component="div"></ListSubheader>
         </GridListTile>
         {tileData.map((tile) => (
-          <GridListTile key={tile.img}>
+          <GridListTile key={tile.img} style={{ paddingRight: '30px', paddingLeft: '30px'}}>
             <img src={`${tileData.img}`} alt={tile.title} />
             <GridListTileBar
               title={tile.title}

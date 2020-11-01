@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   headerName: {
     marginTop: theme.spacing(2),
-    width: '25%'
+    width: '25%',
 
   },
   ticker: {
@@ -43,7 +43,7 @@ function Header() {
         aria-label="text primary button group"
         className={classes.headerName}
       >
-        <Button className={classes.headerName} to="/" >Chris Reed</Button>
+        <Link to="/" className={classes.headerName} style={{ textDecoration: 'none', color: 'inherit', textAlign: 'center' }}><Button className={classes.headerName} >Chris Reed</Button></Link>
         <Button className={classes.headerName} disabled></Button>
         </ButtonGroup>
       <ButtonGroup 

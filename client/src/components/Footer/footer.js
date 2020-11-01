@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     bottom: "0",
     height: "60px",
     width: "100%",
+    marginTop: "40vh - 40px",
   },
 }
 ))
