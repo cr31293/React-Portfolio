@@ -1,111 +1,45 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+
 
 const useStyles = makeStyles((theme) => ({
-  group: {
-    marginTop: theme.spacing(3),
-    color: "#333",
-    display: "flex",
-    position: "static",
-    textAlign: "center",
-    width: "100%",
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
+    width: "100%"
   },
-  heroButtons: {
-    marginTop: theme.spacing(2),
-    width: "50%",
+  app: {
+    backgroundColor: "#929985",
+    color: "#424242",
+    minHeight: 70,
+    width: "100%"
+    
   },
-  headerName: {
-    marginTop: theme.spacing(2),
-    width: "25%",
-  },
-  ticker: {
-    marginTop: theme.spacing(2),
-    width: "25%",
-    flexDirection: "row-reverse",
-  },
+  tabs: {
+    marginTop: ".5%"
+  }
 }));
 
-function Header() {
+export default function SimpleTabs() {
   const classes = useStyles();
-  const location = useLocation();
-  return (
-    <div className={"classes.group"}>
-      <ButtonGroup
-        variant="text"
-        color="textSecondary"
-        aria-label="text primary button group"
-        className={classes.headerName}
-      >
-        <Link
-          to="/"
-          className={classes.headerName}
-          style={{
-            textDecoration: "none",
-            color: "inherit",
-            textAlign: "center",
-          }}
-        >
-          <Button className={classes.headerName}>Chris Reed</Button>
-        </Link>
-        <Button className={classes.headerName} disabled></Button>
-      </ButtonGroup>
-      <ButtonGroup
-        variant="text"
-        color="textSecondary"
-        aria-label="text primary button group"
-        className={classes.heroButtons}
-      >
-        <Link
-          to="/portfolio"
-          className={classes.heroButtons}
-          style={{
-            textDecoration: "none",
-            color: "inherit",
-            textAlign: "center",
-          }}
-        >
-          <Button>Portfolio</Button>
-        </Link>
 
-        <Link
-          to="/resume"
-          className={classes.heroButtons}
-          style={{
-            textDecoration: "none",
-            color: "inherit",
-            textAlign: "center",
-          }}
-        >
-          <Button className={classes.heroButtons}>Resume</Button>
-        </Link>
-        <Link
-          to="/contact"
-          className={classes.heroButtons}
-          style={{
-            textDecoration: "none",
-            color: "inherit",
-            textAlign: "center",
-          }}
-        >
-          <Button className={classes.heroButtons}>Contact</Button>
-        </Link>
-      </ButtonGroup>
-      <ButtonGroup
-        variant="text"
-        color="textSecondary"
-        aria-label="text primary button group"
-        className={classes.ticker}
-      >
-        <Button className={classes.ticker} to="/">
-          TICKER
-        </Button>
-        <Button className={classes.ticker} disabled></Button>
-        <Button className={classes.ticker} disabled></Button>
-      </ButtonGroup>
+
+  return (
+    <div className={classes.root}>
+      <AppBar position="static" className={classes.app}>
+        <Tabs  aria-label="Navigation Tabs" centered textColor="inherit" className={classes.tabs}>
+          <Tab label="Home" href="./" />
+          <Tab label="Portfolio" href="./portfolio" />
+          <Tab label="Resume" href="./resume" />
+          <Tab label="Contact" href="./contact" />
+        </Tabs>
+      </AppBar>
     </div>
   );
 }
-export default Header;

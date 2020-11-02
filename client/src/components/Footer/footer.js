@@ -9,7 +9,6 @@ import Link from '@material-ui/core/Link';
 const useStyles = makeStyles((theme) => ({
   icons: {
     textAlign: "center",
-    padding: "20px",
     position: "fixed",
     left: "0",
     bottom: "0",
