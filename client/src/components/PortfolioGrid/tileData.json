@@ -1,0 +1,37 @@
+    [{
+        "id": 1,
+        "image": "/images/bill-tracker.png",
+        "title": "Bill Tracker",
+        "author": "Chris Reed",
+        "repo": "https://github.com/KelalArrzenai/bill-tracker"
+      },
+      {
+        "id": 2,
+        "image": "/images/employee-directory.png",
+        "title": "Employee Directory",
+        "author": "Chris Reed",
+        "repo": "https://github.com/cr31293/Employee-Directory"
+      },
+      {
+        "id": 3,
+        "image": "/images/budget-tracker.png",
+        "title": "Budget Tracker",
+        "author": "Chris Reed",
+        "repo": "https://github.com/cr31293/Budget-Tracker"
+      },
+      {
+        "id": 4,
+        "image": "/images/fitness-tracker.png",
+        "title": "Fitness Tracker",
+        "author": "Chris Reed",
+        "repo": "https://github.com/cr31293/Fitness-Tracker"
+      },
+      {
+        "id": 5,
+        "image": "/images/readme-generator.png",
+        "title": "ReadMe Generator",
+        "author": "Chris Reed",
+        "repo": "https://github.com/cr31293/ReadMe-Generator"
+      }
+    ]
+
