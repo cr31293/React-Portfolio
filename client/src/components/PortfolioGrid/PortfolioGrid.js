@@ -71,7 +71,7 @@ export default function PortfolioGrid() {
         </GridListTile>
         {tileData.map((tile) => (
           <GridListTile key={tile.image} style={{ paddingRight: '30px', paddingLeft: '30px', paddingBottom: '30px'}}>
-            <img src={tile.image} alt={tile.title}/>
+            <img src={process.env.PUBLIC_URL + tile.image} alt={tile.title}/>
             <GridListTileBar
               title={tile.title}
               subtitle={<span>by: {tile.author}</span>}
