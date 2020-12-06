@@ -64,24 +64,7 @@ export default function Hello() {
           avgTypingDelay={70}
           startDelay={2000}
         >
-          <span className={classes.chris}>Hi, my name is Christopher</span>
-          <Typist.Backspace count={6} delay={700} avgTypingDelay={200} />
-          <FormControlLabel className={classes.container}
-            control={
-        <Typist
-          className="TypistExample-message"
-          cursor={{
-            show: false,
-            element: '_',
-          }}
-          avgTypingDelay={70}
-        >
-            <span className={classes.reed} checked={checked} 
-            onChange={handleChange}> Reed!</span>
-        </Typist>
-        }
-        />
-          <span> </span>
+          <span className={classes.chris}>Hi, my name is Christopher Reed</span>
           </Typist>
       </Typography>
     </div>
