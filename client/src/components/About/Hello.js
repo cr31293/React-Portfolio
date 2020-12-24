@@ -2,11 +2,6 @@ import React from "react";
 import Typist from "react-typist";
 import Typography from "@material-ui/core/Typography";
 import './index.scss';
-import About from "./About";
-import Switch from '@material-ui/core/Switch';
-import Paper from '@material-ui/core/Paper';
-import Zoom from '@material-ui/core/Zoom';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -17,20 +12,12 @@ const useStyles = makeStyles((theme) => ({
   chris: {
     height: 180,
   },
-  reed: {
-    height: 180,
-    marginLeft: 20,
-  },
   container: {
     display: 'inline',
   },
   paper: {
-    margin: theme.spacing(1),
   },
-  svg: {
-    width: 100,
-    height: 100,
-  },
+
   polygon: {
     fill: theme.palette.common.white,
     stroke: theme.palette.divider,

@@ -1,8 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
-import Hello from "./About/Hello";
-import About from "./About/About";
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {

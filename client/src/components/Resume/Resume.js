@@ -8,7 +8,8 @@ const useStyles = makeStyles({
     height: "auto",
     margin: "auto",
     marginBottom: "5%",
-    marginTop: "1.5%"
+    marginTop: "7em"
+
   },
 });
 

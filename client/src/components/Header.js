@@ -1,11 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -17,12 +14,12 @@ const useStyles = makeStyles((theme) => ({
   app: {
     backgroundColor: "#929985",
     color: "#424242",
-    minHeight: 70,
+    minHeight: "4.5em",
     width: "100%"
-    
   },
   tabs: {
-    marginTop: ".5%"
+    marginTop: ".8em",
+
   }
 }));
 
@@ -32,7 +29,7 @@ export default function SimpleTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.app}>
+      <AppBar position="fixed" className={classes.app}>
         <Tabs  aria-label="Navigation Tabs" centered textColor="inherit" className={classes.tabs}>
           <Tab label="Home" href="./" />
           <Tab label="Portfolio" href="./portfolio" />

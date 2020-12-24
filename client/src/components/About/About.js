@@ -18,9 +18,13 @@ const useStyles = makeStyles((theme) => ({
     
   },
   expand: {
-    marginRight: '50%',
-    marginLeft: '50%',
-    boxShadow: 'none'
+    marginLeft: "49.75%",
+    marginRight: "50.25%",
+    boxShadow: 'none',
+    padding: "0",
+  },
+  expandIcon: {
+    fontSize: "1.5em",
   }
 }))
 
@@ -30,7 +34,7 @@ const classes = useStyles();
   return (
     <Accordion className={classes.accordion}>
       <AccordionSummary className={classes.expand}
-        expandIcon={<ExpandMoreIcon />}
+        expandIcon={<ExpandMoreIcon className={classes.expandIcon} />}
         aria-controls="panel1a-content"
         id="panel1a-header"
         >

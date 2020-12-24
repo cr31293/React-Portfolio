@@ -3,19 +3,25 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 
 const useStyles = makeStyles((theme) => ({
-  icons: {
-    textAlign: "center",
-    position: "fixed",
-    left: "0",
-    bottom: "0",
-    height: "60px",
+  footer: {
+    left: "0em",
+    right: "0em",
+    bottom: "0em",
+    height: "2em",
     width: "100%",
-    marginTop: "40vh - 40px",
+    marginTop: "40vh - 10em",
+    "& .MuiBottomNavigation-root": {
+      backgroundColor: "inherit"
+    }
   },
+  bottomNav: {
+    paddingTop: "1em",
+    paddingBottom: "1em",
+  }
 }
 ))
 
@@ -24,10 +30,12 @@ export default function Footer() {
 
   return(
     <>
-    <div className={classes.icons}>
-      <Button><Link href="https://github.com/cr31293"><GitHubIcon color="disabled"/></Link></Button>
-      <Button><Link href="https://twitter.com/chrisreed32"><TwitterIcon color="disabled"/></Link></Button>
-      <Button><Link href="https://www.linkedin.com/in/chris-reed-0b9b097b/"><LinkedInIcon color="disabled"/></Link></Button>
+    <div className={classes.footer}>
+    <BottomNavigation className={classes.bottomNav}>
+      <BottomNavigationAction className={classes.icon} label="GitHub" href="https://github.com/cwr31293" icon={<GitHubIcon />} />
+      <BottomNavigationAction className={classes.icon} label="Twitter" href="https://twitter.com/chrisreed32" icon={<TwitterIcon />} />
+      <BottomNavigationAction className={classes.icon} label="LinkedIn" href="https://www.linkedin.com/in/chris-reed-0b9b097b" icon={<LinkedInIcon />} />
+    </BottomNavigation>
     </div>
     </>
   );
