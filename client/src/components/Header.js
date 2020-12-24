@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
   },
   tabs: {
     marginTop: ".8em",
-
   }
 }));
 

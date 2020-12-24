@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
   chris: {
     height: 180,
+
   },
   container: {
     display: 'inline',
