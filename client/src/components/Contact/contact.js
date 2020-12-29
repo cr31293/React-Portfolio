@@ -28,7 +28,10 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "rgba(0,0,0,.075)",
     },
   },
-  thanks: {
+  reachOut: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1em"
+    },
     [theme.breakpoints.down("md")]: {
       marginTop: "7.5rem"
     },
@@ -37,9 +40,22 @@ const useStyles = makeStyles((theme) => ({
     },
     width: "100%",
     textAlign: "center",
-    marginTop: "5%",
-    paddingBottom: "2%",
+
     paddingTop: "2%",
+  },
+  thanks: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1em",
+    },
+    [theme.breakpoints.down("md")]: {
+      marginTop: "7.5rem"
+    },
+    [theme.breakpoints.down("lg")]: {
+      marginTop: "7.5rem"
+    },
+    width: "100%",
+    textAlign: "center",
+    marginBottom: "7.5%"
   },
   box: {
     margin: "5%",
@@ -53,10 +69,12 @@ function ContactInfo() {
     <>
       <Box className={classes.box}>
         <div>
-          <h1 className={classes.thanks}>
-            Thank you for visiting! Please feel free to reach out by any of the
-            medias below!
+          <h1 className={classes.reachOut}>
+            Please reach out via cell at 865-712-8932 or by the medias below.
           </h1>
+          <h2 className={classes.thanks}>
+          Thank you for visiting! 
+          </h2>
         </div>
         <Grid container direction="row" justify="center" alignItems="center">
           <div>
