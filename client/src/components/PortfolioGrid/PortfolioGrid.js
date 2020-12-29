@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   gridList: {
     height: "80%",
+    width: "60%",
     overflowY: "auto",
     margin: 0,
     padding: 0,
@@ -31,31 +32,15 @@ const useStyles = makeStyles((theme) => ({
     "&::-webkit-scrollbar-thumb": {
       backgroundColor: "rgba(0,0,0,.075)",
     },
+  tileBar: {
+    backgroundColor: "rgba(0, 0, 0, 1)"
+  },
   },
   icon: {
     color: "rgba(255, 255, 255, 0.54)",
   },
   
 }));
-
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const tileData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
-
 
 export default function PortfolioGrid() {
   const classes = useStyles();
@@ -78,16 +63,23 @@ export default function PortfolioGrid() {
           >
             <img src={process.env.PUBLIC_URL + tile.image} alt={tile.title} />
             <GridListTileBar
+              className={classes.tileBar}
               title={tile.title}
               subtitle={<span>by: {tile.author}</span>}
               actionIcon={
                 <>
-                  <Link href={tile.repo}>
+                  <Link 
+                    href={tile.repo}
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <IconButton
                       aria-label={`info about ${tile.title}`}
                       className={classes.icon}
+                      size="small"
                     >
                       <GitHubIcon />
+                      <InfoIcon />
                     </IconButton>
                   </Link>
                 </>
