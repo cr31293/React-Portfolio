@@ -40,8 +40,8 @@ const useStyles = makeStyles((theme) => ({
     },
     width: "100%",
     textAlign: "center",
-
     paddingTop: "2%",
+    color: "#424242",
   },
   thanks: {
     [theme.breakpoints.down("sm")]: {
@@ -55,7 +55,8 @@ const useStyles = makeStyles((theme) => ({
     },
     width: "100%",
     textAlign: "center",
-    marginBottom: "7.5%"
+    marginBottom: "2%",
+    color: "#424242",
   },
   box: {
     margin: "5%",
@@ -84,21 +85,33 @@ function ContactInfo() {
               </GridListTile>
               <GridListTile>
                 <Button>
-                  <Link href="https://github.com/cr31293">
+                  <Link 
+                  href="https://github.com/cr31293"
+                  target="_blank"
+                  rel="noopener"
+                  >
                     <GitCard />
                   </Link>
                 </Button>
               </GridListTile>
               <GridListTile>
                 <Button>
-                  <Link href="https://twitter.com/chrisreed32">
+                  <Link 
+                  href="https://twitter.com/chrisreed32"
+                  target="_blank"
+                  rel="noopener"
+                  >
                     <TwitterCard />
                   </Link>
                 </Button>
               </GridListTile>
               <GridListTile>
                 <Button>
-                  <Link href="https://www.linkedin.com/in/chris-reed-0b9b097b/">
+                  <Link 
+                  href="https://www.linkedin.com/in/chris-reed-0b9b097b/"
+                  target="_blank"
+                  rel="noopener"
+                  >
                     <LinkedInCard />
                   </Link>
                 </Button>
