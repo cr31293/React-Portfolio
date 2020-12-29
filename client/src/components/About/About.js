@@ -76,7 +76,7 @@ const handleChange = () => {
             eact and <strong>N</strong>odeJS.
           <Grow
             in={checked}
-            style={{ transformOrigin: '10em 50% 10em' }}
+            style={{ transformOrigin: '10em 75% 10em' }}
             {...(checked ? { timeout: 3000 } : {})}
           >
           <img src={Profile} className={classes.profile}/>
