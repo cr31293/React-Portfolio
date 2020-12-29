@@ -52,8 +52,10 @@ export default function Hello() {
           avgTypingDelay={70}
           startDelay={2000}
         >
-          <span className={classes.chris}>Hi, my name is Christopher Reed</span>
-          </Typist>
+          <span className={classes.chris}>
+            Hi, my name is Christopher Reed
+            </span>
+        </Typist>
       </Typography>
     </div>
   );

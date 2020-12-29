@@ -4,8 +4,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 
 const useStyles = makeStyles({
   media: {
-    width: "auto",
-    height: "auto",
+    width: "-webkit-fill-available",
+    height: "fit-conent",
     margin: "auto",
     marginBottom: "5%",
     marginTop: "7em"

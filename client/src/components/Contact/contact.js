@@ -29,6 +29,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   thanks: {
+    [theme.breakpoints.down("md")]: {
+      marginTop: "7.5rem"
+    },
+    [theme.breakpoints.down("lg")]: {
+      marginTop: "7.5rem"
+    },
     width: "100%",
     textAlign: "center",
     marginTop: "5%",

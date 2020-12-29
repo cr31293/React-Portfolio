@@ -7,7 +7,9 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 
 const useStyles = makeStyles((theme) => ({
+
   footer: {
+    display: "center",
     left: "0em",
     right: "0em",
     bottom: "0em",
