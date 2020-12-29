@@ -1,14 +1,13 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { Container, FormControlLabel } from "@material-ui/core";
+import Container from "@material-ui/core/Container";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
-import AccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { mergeClasses } from "@material-ui/styles";
 import Image from "../../assets/images/green_cup.png";
-
+import Profile from "../../assets/images/profilepic.jpg";
+import Grow from "@material-ui/core/Grow";
 
 const useStyles = makeStyles((theme) => ({
   accordion: {
@@ -25,21 +24,41 @@ const useStyles = makeStyles((theme) => ({
   },
   expandIcon: {
     fontSize: "1.5em",
+  },
+  profile: {
+    objectPosition: "center",
+    marginTop: "1em"
   }
 }))
 
 function About() {
 const classes = useStyles();
+const [checked, setChecked] = React.useState(false);
+
+const handleChange = () => {
+  setChecked((prev) => !prev);
+};
 
   return (
     <Accordion className={classes.accordion}>
       <AccordionSummary className={classes.expand}
-        expandIcon={<ExpandMoreIcon className={classes.expandIcon} />}
+        expandIcon={
+        <ExpandMoreIcon 
+          className={classes.expandIcon}
+          onClick={handleChange}
+        />}
         aria-controls="panel1a-content"
         id="panel1a-header"
+        
         >
         </AccordionSummary>
         <Container maxWidth='sm'>
+
+          <Grow
+            in={checked}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(checked ? { timeout: 1000 } : {})}
+          >
           <Typography 
             variant="h6"
             align="center"
@@ -55,7 +74,17 @@ const classes = useStyles();
             and Javascript with focuses on <strong>M</strong>ongoDB{" "}
             <strong>E</strong>xpress <strong>R</strong>
             eact and <strong>N</strong>odeJS.
+          <Grow
+            in={checked}
+            style={{ transformOrigin: '10em 50% 10em' }}
+            {...(checked ? { timeout: 3000 } : {})}
+          >
+          <img src={Profile} className={classes.profile}/>
+
+          </Grow>
           </Typography>
+
+          </Grow>
         </Container>
     </Accordion>
 
