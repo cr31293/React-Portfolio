@@ -74,6 +74,7 @@ const handleChange = () => {
             and Javascript with focuses on <strong>M</strong>ongoDB{" "}
             <strong>E</strong>xpress <strong>R</strong>
             eact and <strong>N</strong>odeJS.
+          <div>
           <Grow
             in={checked}
             style={{ transformOrigin: '10em 75% 10em' }}
@@ -82,6 +83,8 @@ const handleChange = () => {
           <img src={Profile} className={classes.profile}/>
 
           </Grow>
+
+          </div>
           </Typography>
 
           </Grow>
