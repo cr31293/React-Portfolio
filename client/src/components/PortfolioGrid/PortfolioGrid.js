@@ -10,6 +10,9 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import tileData from "./tileData.json";
 import Link from "@material-ui/core/Link";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Button from "@material-ui/core/Button";
+import Snackbar from "@material-ui/core/Snackbar";
+import CloseIcon from "@material-ui/icons/Close";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,12 +51,24 @@ const useStyles = makeStyles((theme) => ({
 export default function PortfolioGrid() {
   const classes = useStyles();
   const theme = useTheme();
-  const colMatches = useMediaQuery(theme.breakpoints.down("sm"));
+  const [open, setOpen] = React.useState(false);
 
+  const colMatches = useMediaQuery(theme.breakpoints.down("sm"));
   const mobileCol = 1;
   const nonMobileCol = 2;
   const gridListTileDisplay = colMatches ? "listItems" : "flex";
   const gridListTileWidth = colMatches ? "70%" : "50%";
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
 
   return (
     <div className={classes.root}>
@@ -78,7 +93,13 @@ export default function PortfolioGrid() {
               margin: "auto"
             }}
           >
+            <Link 
+              href={tile.live}
+              target="_blank"
+              rel="noopener"
+              >
             <img src={process.env.PUBLIC_URL + tile.image} alt={tile.title} />
+            </Link>
             <GridListTileBar
               className={classes.tileBar}
               style={{
@@ -99,9 +120,30 @@ export default function PortfolioGrid() {
                       size="small"
                     >
                       <GitHubIcon />
-                      <InfoIcon />
                     </IconButton>
                   </Link>
+                  <Button onClick={handleClick}><InfoIcon /></Button>
+                  <Snackbar
+                    anchorOrigin={{
+                      vertical: 'bottom',
+                      horizontal: 'left',
+                    }}
+                    open={open}
+                    onClose={handleClose}
+                    message={tile.author}
+                    action={
+                      <>
+                        <IconButton 
+                          size="small" 
+                          aria-label="close" 
+                          color="inherit"
+                          onClick={handleClose}
+                        >
+                          <CloseIcon fontSize="small" />
+                        </IconButton>
+                      </>
+                    }
+                  />
                 </>
               }
             />
