@@ -75,7 +75,7 @@ export default function PortfolioGrid() {
               paddingLeft: "1rem",
               paddingBottom: "2rem",
               display: gridListTileDisplay,
-              margin: ""
+              margin: "auto"
             }}
           >
             <img src={process.env.PUBLIC_URL + tile.image} alt={tile.title} />
