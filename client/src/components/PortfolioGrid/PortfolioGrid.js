@@ -75,7 +75,7 @@ export default function PortfolioGrid() {
       <GridList cellHeight={"auto"} className={classes.gridList}>
         <GridListTile 
           key="Subheader" 
-          cols={colMatches ? 1 : 2 } 
+          cols={ colMatches ? 1 : 2 } 
           
         >
           <ListSubheader component="div"></ListSubheader>
@@ -130,7 +130,7 @@ export default function PortfolioGrid() {
                     }}
                     open={open}
                     onClose={handleClose}
-                    message={tile.author}
+                    message={`figure out .md parser to show our readme here. Styling tbd`}
                     action={
                       <>
                         <IconButton 
