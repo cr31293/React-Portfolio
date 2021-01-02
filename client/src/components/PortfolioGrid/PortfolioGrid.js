@@ -60,7 +60,7 @@ export default function PortfolioGrid() {
   const mobileCol = 1;
   const nonMobileCol = 2;
   const gridListTileDisplay = colMatches ? "listItems" : "flex";
-  const gridListTileWidth = colMatches ? "70%" : "50%";
+  const gridListTileWidth = colMatches ? "100%" : "50%";
 
   const handleClick = () => {
     setOpen(true);
