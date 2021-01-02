@@ -44,6 +44,9 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     color: "rgba(255, 255, 255, 0.54)",
+    fontSize: "2rem",
+    display: "inline",
+    
   },
   
 }));
@@ -117,12 +120,11 @@ export default function PortfolioGrid() {
                     <IconButton
                       aria-label={`info about ${tile.title}`}
                       className={classes.icon}
-                      size="small"
                     >
                       <GitHubIcon />
                     </IconButton>
                   </Link>
-                  <Button onClick={handleClick}><InfoIcon /></Button>
+                  <Button onClick={handleClick}><InfoIcon className={classes.icon}/></Button>
                   <Snackbar
                     anchorOrigin={{
                       vertical: 'bottom',
@@ -130,11 +132,10 @@ export default function PortfolioGrid() {
                     }}
                     open={open}
                     onClose={handleClose}
-                    message={`figure out .md parser to show our readme here. Styling tbd`}
+                    message={`figure out .md parser to show our readme here. Styling should be center screen.`}
                     action={
                       <>
                         <IconButton 
-                          size="small" 
                           aria-label="close" 
                           color="inherit"
                           onClick={handleClose}
