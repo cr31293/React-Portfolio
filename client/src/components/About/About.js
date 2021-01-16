@@ -74,7 +74,7 @@ const handleChange = () => {
             and Javascript with focuses on <strong>M</strong>ongoDB{" "}
             <strong>E</strong>xpress <strong>R</strong>
             eact and <strong>N</strong>odeJS.
-          <div>
+          
           <Grow
             in={checked}
             style={{ transformOrigin: '10em 75% 10em' }}
@@ -84,7 +84,7 @@ const handleChange = () => {
 
           </Grow>
 
-          </div>
+          
           </Typography>
 
           </Grow>

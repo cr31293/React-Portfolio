@@ -49,8 +49,8 @@ export default function Hello() {
             show: false,
             element: '_',
           }}
-          avgTypingDelay={70}
-          startDelay={2000}
+          avgTypingDelay={50}
+          startDelay={100}
         >
           <span className={classes.chris}>
             Hi, my name is Christopher Reed
